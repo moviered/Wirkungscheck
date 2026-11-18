@@ -1,0 +1,169 @@
+{
+  "einstellungen": {
+    "name": "Sandra Schneider",
+    "seiten_adresse": "https://check.sicherauftreten.com",
+    "datenschutz_url": "https://www.makeupcoaching.com/datenschutz",
+    "impressum_url": "https://www.makeupcoaching.com/impressum",
+    "anmeldung": "formular",
+    "weg_b_url": "https://www.makeupcoaching.com/wirkungscheck-september-video-sign-up",
+    "_anmeldung_hinweis": "\"formular\": Video gegen Adresse im Check (eintragen.js an Wix). \"wix-seite\": Weg B, Knopf auf weg_b_url wie in v2."
+  },
+  "kopf": {
+    "marke": "Der Wirkungscheck",
+    "fuer": "Für Frauen ab 40, die etwas zu sagen haben.",
+    "titel": "Fünf Muster, an denen du erkennst, ob dein Aussehen zu dem passt, was du heute machst.",
+    "einleitung": "Du hast Themen, mit denen du gewachsen bist, aber überlegst jeden Morgen: Was mache ich mit meinen Haaren? Benutze ich Makeup und wenn ja, wie viel? Welche Farben brauche ich heute? Mit diesen fünf Mustern findest du heraus, wo du stehst und warum.",
+    "anleitung": "Klick bei jedem Muster an, ob du es kennst. Das dauert drei Minuten, du brauchst keine E-Mail-Adresse und eine erste Einschätzung findest du direkt danach."
+  },
+  "muster": [
+    {
+      "nummer": "Muster 1",
+      "titel": "Deine Expertise ist gewachsen, dein Foto von früher zeigt das nicht.",
+      "szene": [
+        "Du weißt heute mehr als vor ein paar Jahren, trägst mehr Verantwortung und kannst klarer sagen, wofür du stehst. Du führst Gespräche mit Kunden, sprichst vor deinem Team, wirst für einen Vortrag angekündigt oder bewirbst dich auf eine neue Stelle. Dann öffnest du dein LinkedIn-Profil oder die Teamseite auf der Webseite und dort lächelt dir die Frau von vor ein paar Jahren entgegen. Sie sieht freundlich aus und trotzdem fehlt auf diesem Foto alles, was du dir seitdem erarbeitet hast."
+      ],
+      "zitat": "Eigentlich bräuchte ich endlich neue Fotos.",
+      "ergebnis_kurz": "Dein Foto zeigt die Frau, mit der alles angefangen hat. Wer dich heute trifft, erlebt eine andere und spätestens beim persönlichen Treffen fällt das auf.",
+      "ergebnis_satz": "Ja. Das bin ich. Und so kann ich vor meinen Kunden stehen.",
+      "vertiefung": [
+        "Du magst nur wenige Fotos von dir und Shootings sind auch nicht unbedingt dein Ding. Also schiebst du das neue Foto vor dir her. Deine Arbeit wächst, deine Aufgaben werden größer und dein Bild bleibt, wie es ist. Vielleicht trägst du die Haare inzwischen anders, oder deine Farben haben sich verändert. Trotzdem denkst du: Das alte Bild war doch gut, das geht noch.",
+        "Wer dich schon kennt, merkt, dass sich deine Arbeit verändert hat und dein Bild stehen geblieben ist. Wer dich zum ersten Mal sieht, ordnet dich nach einem Foto ein, das nicht mehr zu dir passt. Spätestens beim persönlichen Treffen steht vor deinem Gegenüber eine andere Frau als auf der Webseite.",
+        "Ein erster Schritt, den du gleich ausprobieren kannst: Mach dich morgens wie immer für einen ganz normalen Arbeitstag fertig, lass dich von jemandem mit dem Handy am Fenster fotografieren und leg das Bild neben dein Profilfoto. Dann siehst du selbst, wie groß der Abstand ist."
+      ]
+    },
+    {
+      "nummer": "Muster 2",
+      "titel": "Ich weiß nicht genau, wie ich professionell aussehen und ich selbst sein kann.",
+      "szene": [
+        "Heute steht ein wichtiges Gespräch an. Gestern hattest du dich vorbereitet und den Lippenstift, den du schon eine Weile hast, und eine etwas mutigere Farbe im Outfit bereitgelegt. Haare sollten offen sein. Und am Morgen kommen die Zweifel, ob das für so ein Gespräch nicht zu viel ist. Also greifst du doch wieder zu Schwarz, drehst die Haare schnell zum Dutt und lässt den Lippenstift liegen, denn damit kannst du nichts falsch machen.",
+        "Im Gespräch erklärst du ausführlich, was deine Arbeit besonders macht. Fachlich bist du top und trotzdem ärgerst du dich hinterher, dass du wieder nicht so aufgetreten bist, wie du es dir vorgenommen hattest."
+      ],
+      "zitat": "Ich will professionell aussehen, aber nicht so businessmäßig.",
+      "ergebnis_kurz": "Schwarz oder Dunkelblau gibt dir Sicherheit. Greifst du automatisch vor jedem Termin dazu, kann es sein, dass dein Auftritt wenig von dir und dem Niveau deiner Arbeit heute zeigt.",
+      "ergebnis_satz": "Mein Auftritt zeigt, wofür ich stehe und auf welchem Niveau ich arbeite.",
+      "vertiefung": [
+        "Du weißt, wer du bist und was du kannst. Trotzdem soll dein Auftreten nicht nach Angeberei aussehen oder zu viel Aufmerksamkeit auf sich ziehen. Deshalb greifst du lieber zu Schwarz oder Dunkelblau, nimmst die Haare zusammen und lässt den Lippenstift liegen, denn damit fühlst du dich sicher.",
+        "Dein Gegenüber lernt deine Erfahrung, deine Ideen und deine besondere Art deshalb erst im Gespräch kennen. Was dich von anderen unterscheidet, musst du mit Worten erklären und du erklärst ausführlicher, als du eigentlich müsstest.",
+        "Dein Auftreten kann schon vor dem ersten Satz zeigen, dass hier eine Frau sitzt, die weiß, was sie tut, eine klare Handschrift hat und ihren Wert kennt. Zwischen auffällig um jeden Preis und möglichst unauffällig liegt viel Spielraum und genau dort kannst du finden, was zu dir passt.",
+        "Verändere an wichtigen Tagen eine Sache, die wirklich zu dir gehört. Der auffälligere Lippenstift, die offenen Haare oder eine mutigere Farbe. Schau mal, wie sich das anfühlt."
+      ]
+    },
+    {
+      "nummer": "Muster 3",
+      "titel": "Was früher funktioniert hat, sieht heute plötzlich anders aus.",
+      "szene": [
+        "Du hast gleich einen wichtigen Termin und machst dich fertig wie immer bei besonderen Anlässen: eine Grundierung, Augen-Makeup, die Haare.",
+        "Und plötzlich sieht es anders aus. Die Grundierung deckt nicht mehr richtig ab, deine Augen wirken irgendwie hart und die Frisur fällt nach kurzer Zeit in sich zusammen. Sogar die Farbe, die dir jahrelang gestanden hat, sieht irgendwie nicht mehr passend aus. Also trägst du noch etwas mehr Produkt auf, ziehst die Augen dunkler nach und sprühst mehr Haarspray in die Haare. Besser wird es dadurch aber nicht.",
+        "Später fragt dich jemand: „Geht es dir gut? Ist alles in Ordnung?“ Dabei fühlst du dich eigentlich richtig gut."
+      ],
+      "zitat": "Früher hat das doch funktioniert. Warum sieht es heute nicht mehr gut aus?",
+      "ergebnis_kurz": "Deine Produkte, Farben und Handgriffe haben dich lange zuverlässig begleitet. Inzwischen passen nicht mehr alle zu deiner Haut, deinen Haaren und deinem Gesicht von heute.",
+      "ergebnis_satz": "Jetzt werde ich nicht mehr auf meine Müdigkeit angesprochen, und das ist eine Wohltat.",
+      "vertiefung": [
+        "Haut und Haare bleiben nicht über Jahre gleich. Die Haut kann trockener werden, Konturen verändern sich und die natürlichen Kontraste im Gesicht werden weicher. Auch die Haare können feiner, trockener oder widerspenstiger werden. Eine Haarfarbe, die früher gut funktioniert hat, wirkt heute möglicherweise härter. Ein Haarschnitt verliert schneller seine Form oder braucht plötzlich eine andere Art des Stylings.",
+        "Du machst nichts falsch, aber du arbeitest einfach weiter mit dem, was jahrelang zuverlässig funktioniert hat.",
+        "Mehr Produkt löst das Problem selten. Oft braucht es eher eine andere Foundation, weniger Puder, Rouge und Augen-Makeup an einer etwas anderen Stelle und einen Haarschnitt, der mit deiner heutigen Haarstruktur funktioniert.",
+        "Wenn du diese Dinge neu abstimmst, wird deine Routine wieder einfacher. Du musst morgens nicht länger vor dem Spiegel stehen oder ständig nachbessern. Du weißt wieder, welche wenigen Schritte bei dir einen sichtbaren Unterschied machen.",
+        "Überlege dir, was dich wirklich stört. Ist es dein Haar? Oder etwas am Makeup? Trägst du überhaupt Makeup? Was fehlt dir? Modernität? Oder Frische? Fehlt dir Frische, probier ein wenig Rouge oben auf den Wangenknochen, und trägst du schon Rouge, nimm eine andere Farbe als sonst. Ist es das Haar, föhn es einmal anders als gewohnt, zum Beispiel anstatt nach innen nach außen, und schau mal, was es mit dir macht."
+      ]
+    },
+    {
+      "nummer": "Muster 4",
+      "titel": "Dein Spiegelbild sah wach und frisch aus, auf dem Bildschirm plötzlich nicht mehr.",
+      "szene": [
+        "Dein nächster Termin ist online. Deine Gesprächspartnerin erzählt gerade, was ihr wichtig ist und gleichzeitig siehst du dich selbst in dem kleinen Bild auf dem Bildschirm: blass, müde und irgendwie flach. Du rückst die Kamera zurecht, streichst dir die Haare aus dem Gesicht und schaust kurz, ob es jetzt besser ist. Natürlich hast du zugehört, aber ein Teil deiner Aufmerksamkeit hing an deinem kleinen Bild. Und das kurze Video, das du gestern für LinkedIn aufgenommen hast, löschst du nach dem ersten Anschauen gleich wieder."
+      ],
+      "zitat": "Auf Zoom sehe ich immer müde aus.",
+      "ergebnis_kurz": "Die Kamera zeigt dich anders als der Spiegel, und oft entscheiden schon Kameraposition, Licht und die Farbe nah an deinem Gesicht, wie wach du auf dem Bildschirm aussiehst.",
+      "ergebnis_satz": "Ich bin im Gespräch ganz bei meinem Gegenüber.",
+      "vertiefung": [
+        "Das Licht kommt aus einer anderen Richtung, die Linse nimmt dem Gesicht Tiefe und der Bildausschnitt endet oft schon auf Brusthöhe. Dadurch wirken Farben, Konturen und Proportionen anders als im direkten Gespräch.",
+        "Bevor du zu mehr Makeup greifst, schau deshalb zuerst auf die Position der Kamera, das Licht, den Abstand zum Bildschirm und die Farbe, die du nah am Gesicht trägst. Danach kommen die Details. Brauchen die Augen etwas mehr Kontur? Wie fallen die Haare? Heben sie sich ausreichend vom Hintergrund ab?",
+        "Wenn du weißt, welche Einstellungen und welche wenigen Handgriffe bei dir funktionieren, musst du dich während des Gesprächs nicht mehr kontrollieren. Du siehst dein kleines Bild noch, aber es zieht nicht mehr ständig deine Aufmerksamkeit auf sich.",
+        "Schalt vor deinem nächsten Online-Termin die Filter aus, die dein Gesicht glätten, und auch den komplett unscharfen Hintergrund. Beides lässt Konturen seltsam aussehen und macht das Gesicht flach. Bei Zoom kannst du stattdessen die Porträtbeleuchtung einschalten, dann wird der Hintergrund auch etwas weicher, und deine Konturen und dein Gesicht bleiben klar. Und sitzt du eher im Dunkeln, probier die Einstellung für schwache Beleuchtung aus."
+      ]
+    },
+    {
+      "nummer": "Muster 5",
+      "titel": "Man soll sich an mich erinnern, aber ich möchte bitte bloß nicht unangenehm auffallen.",
+      "szene": [
+        "Beim Netzwerktreffen kommst du mit einer Frau ins Gespräch. Sie trägt eine besondere Brille, passende Ohrringe und einen wirklich stimmigen Lippenstift. Jemand spricht sie darauf an und schon läuft das Gespräch. Du findest ihren Auftritt stark, aber bei dir selbst lässt du die auffälligeren Ohrringe morgens wieder zu Hause und tupfst den Lippenstift ab, bis man ihn kaum noch sieht. Und wenn du selbst vorne stehst, beim Vortrag oder in der Vorstellungsrunde, wählst du erst recht das Unauffällige. Sicher ist sicher."
+      ],
+      "zitat": "Mit Lippenstift sehe ich sofort angemalt aus.",
+      "ergebnis_kurz": "Für Wiedererkennung reicht oft ein klares Detail, das selbstverständlich zu dir gehört und das du bewusst auswählst.",
+      "ergebnis_satz": "Ich werde auf meine Accessoires angesprochen und zwar genau auf das, was ich zeigen wollte.",
+      "vertiefung": [
+        "Du möchtest professionell wirken und in Erinnerung bleiben. Gleichzeitig soll dein Äußeres nicht mehr Aufmerksamkeit bekommen als das, was du sagst. Also nimmst du lieber alles zurück, was auffallen könnte.",
+        "Dabei reicht oft schon eine einzige Sache, an der man dich wiedererkennt. Das kann eine Frisur sein, ein Lippenstift, eine Farbe an sich, eine Brille oder ein Schmuckstück. Eine große Kette oder ein kräftiger Lippenstift sind dafür nur dann richtig, wenn sie wirklich zu dir passen.",
+        "So ein Detail schafft einen einfachen Einstieg ins Gespräch und sorgt dafür, dass sich jemand später an dich erinnert. Entscheidend ist, dass du es bewusst auswählst und dich damit nicht verkleidet fühlst.",
+        "Such dir für dein nächstes Treffen ein Detail aus, das wirklich zu dir passt. Nimm ein Schmuckstück oder einen anderen Lippenstift als sonst. Und dann achte darauf, wie dein Umfeld reagiert."
+      ]
+    }
+  ],
+  "ergebnis": {
+    "etikett": "Deine erste Einschätzung",
+    "einordnung": "Jedes Muster, das du angeklickt hast, steht für eine Stelle, an der dir noch eine klare Linie fehlt. Dort überlegst du vor wichtigen Terminen immer wieder neu, was zu dir passt.",
+    "zwischentitel": "Deine Muster",
+    "mehr_lesen": "Mehr dazu lesen",
+    "null_hinweis": "Kreuze mindestens ein Muster an, dann zeige ich dir deine erste Einschätzung.",
+    "zurueck": "Zurück zu den fünf Mustern",
+    "stufen": [
+      {
+        "titel": "An so vielen Stellen entscheidest du dein Aussehen noch jedes Mal neu.",
+        "text": "Du kennst dich in deinem Fach aus, bist mit deinen Themen gewachsen und zeigst dich regelmäßig. Dir hat nur noch niemand gezeigt, wie Haare, Makeup, Farben und alles, was du trägst, so zusammenspielen, dass sie zu dir und deiner Arbeit passen. Unten findest du zu jedem deiner Muster, woran es liegen kann, und einen ersten Schritt, den du gleich ausprobieren kannst."
+      },
+      {
+        "titel": "An so vielen Stellen entscheidest du dein Aussehen noch jedes Mal neu.",
+        "text": "Du kennst dich in deinem Fach aus, bist mit deinen Themen gewachsen und zeigst dich regelmäßig. Dir hat nur noch niemand gezeigt, wie Haare, Makeup, Farben und alles, was du trägst, so zusammenspielen, dass sie zu dir und deiner Arbeit passen. Unten findest du zu jedem deiner Muster, woran es liegen kann, und einen ersten Schritt, den du gleich ausprobieren kannst."
+      },
+      {
+        "titel": "An so vielen Stellen entscheidest du dein Aussehen noch jedes Mal neu.",
+        "text": "Du kennst dich in deinem Fach aus, bist mit deinen Themen gewachsen und zeigst dich regelmäßig. Dir hat nur noch niemand gezeigt, wie Haare, Makeup, Farben und alles, was du trägst, so zusammenspielen, dass sie zu dir und deiner Arbeit passen. Unten findest du zu jedem deiner Muster, woran es liegen kann, und einen ersten Schritt, den du gleich ausprobieren kannst."
+      },
+      {
+        "titel": "An so vielen Stellen entscheidest du dein Aussehen noch jedes Mal neu.",
+        "text": "Du kennst dich in deinem Fach aus, bist mit deinen Themen gewachsen und zeigst dich regelmäßig. Dir hat nur noch niemand gezeigt, wie Haare, Makeup, Farben und alles, was du trägst, so zusammenspielen, dass sie zu dir und deiner Arbeit passen. Unten findest du zu jedem deiner Muster, woran es liegen kann, und einen ersten Schritt, den du gleich ausprobieren kannst."
+      },
+      {
+        "titel": "An so vielen Stellen entscheidest du dein Aussehen noch jedes Mal neu.",
+        "text": "Du kennst dich in deinem Fach aus, bist mit deinen Themen gewachsen und zeigst dich regelmäßig. Dir hat nur noch niemand gezeigt, wie Haare, Makeup, Farben und alles, was du trägst, so zusammenspielen, dass sie zu dir und deiner Arbeit passen. Unten findest du zu jedem deiner Muster, woran es liegen kann, und einen ersten Schritt, den du gleich ausprobieren kannst."
+      }
+    ]
+  },
+  "video": {
+    "bild": "assets/video-standbild.jpg",
+    "bild_alt": "Standbild aus dem Video: Sandra Schneider erklärt, was Haare und Makeup bei vier Frauen verändert haben",
+    "bild_aria": "Zum Video: Was Haare und Makeup bei vier Frauen verändert haben",
+    "dauer": "14 Min.",
+    "titel": "Was Haare und Makeup bei vier Frauen verändert haben",
+    "text": "Wie das konkret aussehen kann, zeige ich dir in meinem 14-Minuten-Video an vier Frauen. Bei manchen hat sich die Frisur verändert, bei anderen wurde das Makeup frischer und einer Kundin mit grauen Haaren sagte ich: „Färb sie bitte nie.“ Du siehst an ihren Bildern, welche wenigen Veränderungen den Unterschied machen und was du dir sparen kannst. Trag deine E-Mail-Adresse ein und ich schicke dir das Video.",
+    "knopf": "Zum Video",
+    "klein_weg_b": "Du trägst deine E-Mail-Adresse ein und siehst das Video sofort.",
+    "etikett": "Vor dem Eintragen"
+  },
+  "neue_texte": {
+    "_hinweis": "Texte, die es in v2 nicht gab und die die neue Form braucht. Neu am 25.10.2026, Sandra hat sie noch nicht gesehen.",
+    "start_knopf": "Check starten",
+    "fortschritt": "Muster {x} von 5",
+    "ja": "Ja, das kenne ich",
+    "nein": "Eher nicht",
+    "zurueck": "Zurück",
+    "form_vorname": "Vorname",
+    "form_email": "E-Mail-Adresse",
+    "form_abo": "Ich möchte mich für den Newsletter von Sandra Schneider anmelden.",
+    "form_bestaetigung": "Nach deiner Bestätigung per E-Mail bekommst du den Zugang zum Video.",
+    "form_datenschutz_vor": "Abmelden kannst du dich jederzeit über den Link in jeder E-Mail. Mehr dazu in der",
+    "form_datenschutz_link": "Datenschutzerklärung",
+    "fehler_vorname": "Bitte gib deinen Vornamen ein.",
+    "fehler_email": "Bitte gib eine gültige E-Mail-Adresse ein.",
+    "fehler_abo": "Bitte setz das Häkchen, damit ich dir den Zugang schicken darf.",
+    "fehler_senden": "Das hat gerade nicht geklappt. Bitte versuch es gleich noch einmal.",
+    "fuss_impressum": "Impressum",
+    "fuss_datenschutz": "Datenschutz",
+    "danke_titel": "Schau in dein Postfach",
+    "danke_text": "Bitte öffne jetzt dein Postfach und bestätige deine Anmeldung. Danach kommt der Zugang zum Video per E-Mail.",
+    "danke_spam": "Du findest nichts? Dann schau bitte auch im Spam-Ordner nach.",
+    "danke_zurueck": "Zurück zum Wirkungscheck"
+  },
+  "_hinweis_november": "Texte am 16.11.2026 aus Sandras Überarbeitung übernommen (~/Downloads/Sandra Schneider Neu_Wirkungscheck_Nobember26.pdf, Stand 08.11.2026)."
+}

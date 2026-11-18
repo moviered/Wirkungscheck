@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{kopf.marke}} | {{einstellungen.name}}</title>
+<meta name="description" content="{{kopf.titel}}">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#9db4ab">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="{{einstellungen.name}}">
+<meta property="og:title" content="{{kopf.marke}}: {{kopf.titel}}">
+<meta property="og:description" content="{{kopf.fuer}}">
+<!-- Gebaut aus vorlage.html und fragen.json mit bauen.py. Nicht in index.html aendern. -->
+<style>
+/* Schriften lokal (schriften-holen.py, 25.10.2026). Keine Verbindung zu Google. */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('assets/fonts/montserrat-400-italic-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('assets/fonts/montserrat-400-italic-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('assets/fonts/montserrat-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('assets/fonts/montserrat-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* Sandras Farben: Gruen #9db4ab, Hintergrund #F7F3EA, Markengrau #a19d9d.
+   Kontrast gerechnet: Schrift #3d3632 auf Gruen 5,4; --sage-text auf Weiss 4,7;
+   --sage-dark auf Weiss 3,1 (nur grosse Schrift und Flaechen).
+   16.11.2026 nach Sandras Wuenschen vom 30.10.: Fliesstext schwarz und duenn,
+   Ueberschriften in Sandras Grau #726C6C und kraeftig, alles Linienhafte in
+   Sandras Orange #FF9303, Gruen nur, wo nichts hervorstechen soll. */
+:root{
+  --o:#FF9303;
+  --o-soft:#fff5e6;
+  --o-hell:#ffdfb3;
+  --schwarz:#111;
+  --ueber:#726C6C;
+  --sage:#9db4ab;
+  --sage-dark:#7a9a8d;
+  --sage-text:#5c7a6e;
+  --sage-light:#e8eeeb;
+  --sage-pale:#f2f6f4;
+  --grau:#a19d9d;
+  --grau-pale:#e9e7e7;
+  --warm:#3d3632;
+  --warm-mid:#5e5550;
+  --cream:#F7F3EA;
+  --sand:#ece7df;
+  --w:#fff;
+  --text:#111;
+  --text-mid:#111;
+  --text-light:#7d756e;
+  --fehler:#a33a2a;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--cream);
+  color:var(--text);
+  font-family:'Montserrat',-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:16px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  overflow-wrap:break-word;
+}
+.wrap{max-width:680px;margin:0 auto;padding:0 16px 32px}
+[hidden]{display:none !important}
+
+/* Kopfzeile */
+.kopfzeile{display:flex;justify-content:center;padding:18px 0 4px}
+.kopfname{font-size:.95rem;letter-spacing:.14em;text-transform:uppercase;color:#a19d9d}
+
+/* Bildschirme */
+.screen{display:none}
+.screen.active{display:block}
+
+/* Start */
+.hero{position:relative;overflow:hidden;background:var(--w);border-radius:6px;padding:2.2rem 1.6rem 1.9rem;margin-top:14px;text-align:center}
+.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:240px;height:240px;border-radius:50%;background:var(--sage);opacity:.09}
+.hero::after{content:'';position:absolute;bottom:-50px;left:-50px;width:180px;height:180px;border-radius:50%;background:var(--grau);opacity:.06}
+.brand{position:relative;font-size:clamp(22px,5.4vw,34px);letter-spacing:.14em;text-transform:uppercase;color:var(--sage-dark);font-weight:700;line-height:1.2;margin:0}
+.fuer{position:relative;font-size:14.5px;font-weight:400;color:var(--text-mid);line-height:1.6;max-width:460px;margin:.9rem auto 0;padding-top:.9rem;border-top:1.5px solid var(--o)}
+.ht{position:relative;font-size:clamp(21px,4.2vw,30px);font-weight:700;line-height:1.38;color:var(--ueber);margin:1.3rem auto 0;max-width:560px}
+.hs{position:relative;font-size:15.5px;font-weight:300;color:var(--text-mid);line-height:1.75;max-width:520px;margin:1.2rem auto 0}
+.so{position:relative;font-size:14.5px;font-weight:400;color:var(--warm);line-height:1.6;max-width:520px;margin:1.3rem auto 0;padding:.8rem 1rem;background:var(--sage-pale);border-radius:5px}
+.startbox{position:relative;margin-top:1.6rem}
+
+/* Knoepfe */
+.btn{display:inline-block;background:var(--o);color:var(--schwarz);border:0;border-radius:5px;padding:.95rem 2.1rem;font-size:15px;font-weight:600;font-family:inherit;cursor:pointer;transition:background .2s;text-decoration:none;line-height:1.3}
+.btn:hover{background:#e88500}
+.btn:focus-visible,.wahl:focus-visible,.textknopf:focus-visible{outline:2px solid var(--warm);outline-offset:2px}
+.btn[disabled]{opacity:.6;cursor:wait}
+.textknopf{background:none;border:0;padding:.4rem .2rem;font:inherit;font-size:13.5px;color:var(--text-light);cursor:pointer;border-bottom:1px solid var(--o)}
+.textknopf:hover{color:var(--warm)}
+
+/* Fortschritt */
+.prog{display:flex;align-items:center;gap:14px;margin:22px 0 14px;padding:0 4px}
+.pb{flex:1;height:3px;background:rgba(255,147,3,.25);border-radius:3px;overflow:hidden}
+.pf{height:100%;background:var(--o);border-radius:3px;width:0;transition:width .4s cubic-bezier(.4,0,.2,1)}
+.pl{font-size:13px;color:var(--sage-text);white-space:nowrap;font-weight:600}
+
+/* Musterkarte */
+.card{background:var(--w);border:1.5px solid var(--sand);border-radius:6px;padding:1.5rem 1.4rem}
+.cnum{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-light);font-weight:600;margin:0 0 .35rem}
+.ctit{font-size:18px;font-weight:700;line-height:1.42;color:var(--ueber);margin:0}
+.ctit:focus{outline:none}
+.cbody{margin-top:.9rem}
+.cbody p{font-size:15px;font-weight:300;line-height:1.8;color:var(--text-mid);margin:0 0 .8rem}
+.cbody p.qt{font-size:15px;font-style:italic;font-weight:500;color:var(--schwarz);background:var(--grau-pale);border-left:3px solid var(--o);border-radius:0 4px 4px 0;padding:.8rem 1.1rem;line-height:1.65;margin:1rem 0 0}
+.antworten{display:flex;flex-direction:column;gap:10px;margin-top:1.4rem}
+.wahl{width:100%;background:var(--w);color:var(--schwarz);border:1.5px solid var(--o);border-radius:5px;padding:.9rem 1rem;font:inherit;font-size:15px;font-weight:600;cursor:pointer;transition:background .2s,border-color .2s}
+.wahl:hover{background:var(--o-soft)}
+.wahl[aria-pressed="true"]{background:var(--o-hell);border-color:var(--o)}
+.navzeile{text-align:center;margin-top:14px}
+@media (min-width:520px){
+  .antworten{flex-direction:row}
+  .wahl{flex:1}
+}
+
+/* Kein Muster angekreuzt */
+.leer{background:var(--w);border-radius:6px;padding:1.8rem 1.4rem;margin-top:20px;text-align:center}
+.leer p{margin:0 0 1rem;font-size:15.5px;color:var(--warm)}
+
+/* Ergebnis */
+.res{margin-top:20px}
+.rhead{background:var(--sage);border-radius:6px 6px 0 0;padding:1.8rem 1.6rem;text-align:center}
+.rt2{display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--warm-mid);font-weight:600;margin-bottom:.7rem}
+.rcount{font-size:34px;font-weight:700;color:var(--warm);line-height:1.1;margin:0 0 .5rem}
+.rhl{font-size:19px;font-weight:400;line-height:1.45;color:var(--warm);margin:0}
+.rbody{background:var(--w);border-radius:0 0 6px 6px;padding:1.6rem 1.6rem}
+.rbody p{font-size:15.5px;font-weight:300;color:var(--text-mid);line-height:1.8;margin:0 0 .9rem}
+.rbody p.rsub{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-light);font-weight:600;margin:1.6rem 0 .6rem;padding-top:1.4rem;border-top:1.5px solid var(--o)}
+.deep{margin-top:1.4rem}
+.deep:first-child{margin-top:0}
+.rbody p.dtit{font-size:16px;font-weight:700;color:var(--ueber);margin:0 0 .5rem;line-height:1.4}
+.dtit span{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--o);font-weight:600;margin-bottom:.25rem}
+.rbody p.kurz{margin:0}
+.rbody p.closer{background:var(--grau-pale);border-left:3px solid var(--o);border-radius:0 4px 4px 0;padding:.8rem 1.1rem;font-size:15px;font-style:italic;font-weight:500;color:var(--schwarz);line-height:1.6;margin:.7rem 0 0}
+details.mehr{margin-top:.6rem}
+details.mehr summary{cursor:pointer;font-size:14.5px;color:var(--o);font-weight:700;list-style:none;display:inline-block;border-bottom:1.5px solid var(--o)}
+details.mehr summary::-webkit-details-marker{display:none}
+details.mehr summary::after{content:' \25BE';font-size:.85em}
+details.mehr[open] summary::after{content:' \25B4'}
+.rbody details.mehr p{font-size:15px;margin:.7rem 0 0}
+
+/* Video gegen Adresse */
+.video{background:var(--w);border:1.5px solid var(--o);border-radius:6px;margin-top:18px;overflow:hidden}
+.vpic{position:relative;display:block;background:var(--o-hell);padding:10px}
+.vpic img{display:block;width:100%;height:auto}
+.vplay{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:var(--o);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(0,0,0,.25)}
+.vplay::after{content:'';display:block;width:0;height:0;border-style:solid;border-width:12px 0 12px 20px;border-color:transparent transparent transparent var(--warm);margin-left:5px}
+.vdauer{position:absolute;right:12px;bottom:10px;background:rgba(61,54,50,.85);color:#fff;font-size:12px;font-weight:500;padding:.2rem .55rem;border-radius:3px;letter-spacing:.03em}
+.vtext{padding:1.5rem 1.6rem 1.7rem;text-align:center}
+.vetikett{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--o);font-weight:600;margin-bottom:.5rem}
+.vtext h2{font-size:20px;font-weight:700;color:var(--ueber);margin:0 0 .6rem;line-height:1.35}
+.vtext > p{font-size:15.5px;font-weight:300;color:var(--text-mid);line-height:1.75;margin:0 0 1.2rem}
+.formular{text-align:left;max-width:420px;margin:0 auto}
+.feld{margin-bottom:.9rem}
+.feld label{display:block;font-size:13.5px;font-weight:500;color:var(--warm);margin-bottom:.3rem}
+.feld input{width:100%;font:inherit;font-size:16px;color:var(--warm);background:var(--w);border:1.5px solid var(--o);border-radius:5px;padding:.75rem .85rem}
+.feld input:focus{outline:none;border-color:var(--o);box-shadow:0 0 0 3px var(--o-soft)}
+.feld input[aria-invalid="true"]{border-color:var(--fehler)}
+.haken{display:flex;gap:.65rem;align-items:flex-start;font-size:14px;line-height:1.55;color:var(--warm);margin:.2rem 0 1rem;cursor:pointer}
+.haken input{width:20px;height:20px;min-width:20px;margin:.1rem 0 0;accent-color:var(--o)}
+.formular .btn{width:100%}
+.meldung{min-height:1.2em;font-size:13.5px;color:var(--fehler);margin:.6rem 0 0;text-align:center}
+.klein{font-size:13px;color:var(--text-light);margin:.8rem 0 0;line-height:1.6;text-align:center}
+.klein a{color:var(--sage-text)}
+.honig{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+.zurueck{text-align:center;margin-top:16px}
+
+/* Fuss */
+footer{text-align:center;font-size:12.5px;color:var(--text-light);padding:24px 16px 32px}
+footer a{color:var(--text-light)}
+
+@media (max-width:420px){
+  .hero{padding:2rem 1.1rem 1.7rem}
+  .brand{font-size:21px;letter-spacing:.07em}
+  .fuer{font-size:14px}
+  .card{padding:1.3rem 1.1rem}
+  .rbody,.vtext,.rhead{padding-left:1.1rem;padding-right:1.1rem}
+}
+</style>
+</head>
+<body>
+
+<header class="kopfzeile">
+  <span class="kopfname">{{einstellungen.name}}</span>
+</header>
+
+<main class="wrap">
+
+<!-- ============ START ============ -->
+<section id="screen-start" class="screen active" aria-labelledby="titel">
+  <div class="hero">
+    <p class="brand">{{kopf.marke}}</p>
+    <p class="fuer">{{kopf.fuer}}</p>
+    <h1 class="ht" id="titel">{{kopf.titel}}</h1>
+    <p class="hs">{{kopf.einleitung}}</p>
+    <p class="so">{{kopf.anleitung}}</p>
+    <div class="startbox">
+      <button class="btn" type="button" id="startknopf">{{neue_texte.start_knopf}}</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EIN MUSTER JE BILDSCHIRM ============ -->
+<section id="screen-muster" class="screen">
+  <div class="prog">
+    <div class="pb"><div class="pf" id="pf"></div></div>
+    <div class="pl" id="pl"></div>
+  </div>
+  <article class="card">
+    <p class="cnum" id="mnum"></p>
+    <h2 class="ctit" id="mtit" tabindex="-1"></h2>
+    <div class="cbody" id="mbody"></div>
+    <div class="antworten">
+      <button class="wahl" type="button" id="knopf-ja" aria-pressed="false">{{neue_texte.ja}}</button>
+      <button class="wahl" type="button" id="knopf-nein" aria-pressed="false">{{neue_texte.nein}}</button>
+    </div>
+  </article>
+  <p class="navzeile"><button class="textknopf" type="button" id="schritt-zurueck">{{neue_texte.zurueck}}</button></p>
+</section>
+
+<!-- ============ KEIN MUSTER ANGEKREUZT (Verhalten aus v2) ============ -->
+<section id="screen-leer" class="screen">
+  <div class="leer">
+    <p>{{ergebnis.null_hinweis}}</p>
+    <button class="textknopf" type="button" data-zu-den-mustern>{{ergebnis.zurueck}}</button>
+  </div>
+</section>
+
+<!-- ============ ERGEBNIS, frei sichtbar ============ -->
+<section id="screen-ergebnis" class="screen">
+  <div class="res">
+    <div class="rhead">
+      <span class="rt2">{{ergebnis.etikett}}</span>
+      <p class="rcount" id="rcount"></p>
+      <p class="rhl" id="rhl"></p>
+    </div>
+    <div class="rbody">
+      <p>{{ergebnis.einordnung}}</p>
+      <div id="stufe"></div>
+      <p class="rsub">{{ergebnis.zwischentitel}}</p>
+      <div id="deeps"></div>
+    </div>
+
+    <div class="video">
+      <a class="vpic" href="{{BILD_ZIEL}}" id="video-bild" aria-label="{{video.bild_aria}}">
+        <img src="{{video.bild}}" alt="{{video.bild_alt}}" width="640" height="352" loading="lazy">
+        <span class="vplay" aria-hidden="true"></span>
+        <span class="vdauer">{{video.dauer}}</span>
+      </a>
+      <div class="vtext">
+        <span class="vetikett">{{video.etikett}}</span>
+        <h2>{{video.titel}}</h2>
+        <p>{{video.text}}</p>
+
+        <!-- WEG-B START: nur drin bei einstellungen.anmeldung = "wix-seite" -->
+        <a class="btn" href="{{einstellungen.weg_b_url}}">{{video.knopf}}</a>
+        <p class="klein">{{video.klein_weg_b}}</p>
+        <!-- WEG-B ENDE -->
+        <!-- FORMULAR START: nur drin bei einstellungen.anmeldung = "formular" -->
+        <form class="formular" id="anmeldung" novalidate>
+          <div class="feld">
+            <label for="vorname">{{neue_texte.form_vorname}}</label>
+            <input type="text" id="vorname" name="vorname" autocomplete="given-name" maxlength="100" required>
+          </div>
+          <div class="feld">
+            <label for="email">{{neue_texte.form_email}}</label>
+            <input type="email" id="email" name="email" autocomplete="email" inputmode="email" maxlength="254" required>
+          </div>
+          <div class="honig" aria-hidden="true">
+            <label for="webseite">Webseite</label>
+            <input type="text" id="webseite" name="webseite" tabindex="-1" autocomplete="off">
+          </div>
+          <label class="haken" for="abo">
+            <input type="checkbox" id="abo" name="abo" required>
+            <span>{{neue_texte.form_abo}}</span>
+          </label>
+          <button class="btn" type="submit" id="sendeknopf">{{video.knopf}}</button>
+          <p class="meldung" id="meldung" role="alert"></p>
+          <p class="klein">{{neue_texte.form_bestaetigung}}</p>
+          <p class="klein">{{neue_texte.form_datenschutz_vor}} <a href="{{einstellungen.datenschutz_url}}" target="_blank" rel="noopener">{{neue_texte.form_datenschutz_link}}</a>.</p>
+        </form>
+        <!-- FORMULAR ENDE -->
+      </div>
+    </div>
+
+    <p class="zurueck"><button class="textknopf" type="button" data-zu-den-mustern>{{ergebnis.zurueck}}</button></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  &copy; 2026 {{einstellungen.name}} &middot;
+  <a href="{{einstellungen.impressum_url}}" target="_blank" rel="noopener">{{neue_texte.fuss_impressum}}</a> &middot;
+  <a href="{{einstellungen.datenschutz_url}}" target="_blank" rel="noopener">{{neue_texte.fuss_datenschutz}}</a>
+</footer>
+
+<script>
+/* ---- HIER SETZT bauen.py DIE DATEN EIN ---- */
+/* ---- ENDE DATEN-EINSATZ ---- */
+
+(function(){
+  'use strict';
+
+  // === ZAEHLER ===
+  // Meldet der eigenen Funktion netlify/functions/zaehler.mjs, wie weit jemand
+  // kommt. Nur der Schrittname geht hin, kein Name, keine Adresse, kein Cookie.
+  // Jeder Schritt zaehlt je Seitenaufruf einmal. Faellt die Funktion aus,
+  // merkt die Leserin nichts.
+  var gezaehlt = {};
+  function zaehle(schritt){
+    if (gezaehlt[schritt]) return;
+    gezaehlt[schritt] = true;
+    try {
+      fetch('/.netlify/functions/zaehler', {
+        method: 'POST', keepalive: true,
+        headers: { 'Content-Type': 'text/plain' },
+        body: schritt
+      }).catch(function(){});
+    } catch (e) {}
+  }
+  zaehle('aufruf');
+
+  var ANZAHL = MUSTER.length;
+  var antwort = [];           // je Muster: true (Ja), false (Eher nicht), undefined
+  var aktuell = 0;
+
+  function $(id){ return document.getElementById(id); }
+  function zeige(id){
+    var s = document.querySelectorAll('.screen');
+    for (var i=0;i<s.length;i++) s[i].classList.remove('active');
+    $(id).classList.add('active');
+    window.scrollTo(0,0);
+  }
+  function absatz(text, cls){
+    var p = document.createElement('p');
+    if (cls) p.className = cls;
+    p.textContent = text;
+    return p;
+  }
+  function anzahlJa(){
+    var n = 0;
+    for (var i=0;i<ANZAHL;i++) if (antwort[i] === true) n++;
+    return n;
+  }
+
+  // === EIN MUSTER JE BILDSCHIRM ===
+  function zeigeMuster(i){
+    aktuell = i;
+    var m = MUSTER[i];
+    $('pl').textContent = TEXTE.fortschritt.replace('{x}', i + 1);
+    $('pf').style.width = ((i + 1) / ANZAHL * 100) + '%';
+    $('mnum').textContent = m.nummer;
+    $('mtit').textContent = m.titel;
+    var body = $('mbody');
+    body.innerHTML = '';
+    for (var k=0;k<m.szene.length;k++) body.appendChild(absatz(m.szene[k]));
+    body.appendChild(absatz(m.zitat, 'qt'));
+    $('knopf-ja').setAttribute('aria-pressed', antwort[i] === true ? 'true' : 'false');
+    $('knopf-nein').setAttribute('aria-pressed', antwort[i] === false ? 'true' : 'false');
+    zeige('screen-muster');
+    // Fokus auf den Titel, damit Bildschirmleser das neue Muster vorlesen
+    try { $('mtit').focus({ preventScroll: true }); } catch (e) {}
+  }
+
+  function beantworte(ja){
+    antwort[aktuell] = ja;
+    zaehle('muster-' + (aktuell + 1));
+    if (ja) zaehle('muster-' + (aktuell + 1) + '-ja');
+    if (aktuell < ANZAHL - 1) { zeigeMuster(aktuell + 1); return; }
+    abschluss();
+  }
+
+  // === ERGEBNIS (Logik aus v2: Stufe nach Anzahl, nur angekreuzte Muster) ===
+  function abschluss(){
+    var n = anzahlJa();
+    if (n === 0) { zaehle('ergebnis-leer'); zeige('screen-leer'); return; }
+    var stufe = STUFEN[n - 1];
+    $('rcount').textContent = (n === 1 ? '1 Muster' : n + ' Muster');
+    $('rhl').textContent = stufe.titel;
+    var sbox = $('stufe');
+    sbox.innerHTML = '';
+    sbox.appendChild(absatz(stufe.text));
+
+    var dbox = $('deeps');
+    dbox.innerHTML = '';
+    for (var m=0;m<ANZAHL;m++){
+      if (antwort[m] !== true) continue;
+      var d = document.createElement('div');
+      d.className = 'deep';
+      var h = document.createElement('p');
+      h.className = 'dtit';
+      var sp = document.createElement('span');
+      sp.textContent = MUSTER[m].nummer;
+      h.appendChild(sp);
+      h.appendChild(document.createTextNode(MUSTER[m].titel));
+      d.appendChild(h);
+      d.appendChild(absatz(MUSTER[m].ergebnis_kurz, 'kurz'));
+      d.appendChild(absatz(MUSTER[m].ergebnis_satz, 'closer'));
+      var det = document.createElement('details');
+      det.className = 'mehr';
+      var sum = document.createElement('summary');
+      sum.textContent = TEXTE.mehr_lesen;
+      det.appendChild(sum);
+      for (var k=0;k<MUSTER[m].vertiefung.length;k++) det.appendChild(absatz(MUSTER[m].vertiefung[k]));
+      d.appendChild(det);
+      dbox.appendChild(d);
+    }
+    zaehle('ergebnis');
+    zeige('screen-ergebnis');
+  }
+
+  // === NAVIGATION ===
+  $('startknopf').addEventListener('click', function(){ zaehle('start'); zeigeMuster(0); });
+  $('knopf-ja').addEventListener('click', function(){ beantworte(true); });
+  $('knopf-nein').addEventListener('click', function(){ beantworte(false); });
+  $('schritt-zurueck').addEventListener('click', function(){
+    if (aktuell === 0) { zeige('screen-start'); return; }
+    zeigeMuster(aktuell - 1);
+  });
+  var zurueck = document.querySelectorAll('[data-zu-den-mustern]');
+  for (var z=0;z<zurueck.length;z++){
+    zurueck[z].addEventListener('click', function(){ zeigeMuster(0); });
+  }
+  // Weg B (einstellungen.anmeldung = "wix-seite"): kein Formular, Bild und
+  // Knopf fuehren auf Sandras Wix-Seite. Dann endet das Skript hier.
+  if (!$('anmeldung')) return;
+
+  $('video-bild').addEventListener('click', function(e){
+    e.preventDefault();
+    $('anmeldung').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    try { $('vorname').focus({ preventScroll: true }); } catch (err) {}
+  });
+
+  // === VIDEO GEGEN ADRESSE ===
+  // Vorname, Adresse und Haekchen gehen an die eigene Funktion eintragen.js,
+  // die sie an Sandras Wix-Formular weitergibt. Antworten und Ergebnis
+  // bleiben im Browser.
+  var EMAIL_MUSTER = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  function markiere(feld, falsch){ feld.setAttribute('aria-invalid', falsch ? 'true' : 'false'); }
+
+  $('anmeldung').addEventListener('submit', function(e){
+    e.preventDefault();
+    var vorname = $('vorname'), email = $('email'), abo = $('abo'), meldung = $('meldung');
+    var v = vorname.value.trim(), m = email.value.trim();
+    markiere(vorname, false); markiere(email, false);
+    meldung.textContent = '';
+    if (!v) { markiere(vorname, true); meldung.textContent = TEXTE.fehler_vorname; vorname.focus(); return; }
+    if (!EMAIL_MUSTER.test(m)) { markiere(email, true); meldung.textContent = TEXTE.fehler_email; email.focus(); return; }
+    if (!abo.checked) { meldung.textContent = TEXTE.fehler_abo; abo.focus(); return; }
+
+    var knopf = $('sendeknopf');
+    knopf.disabled = true;
+    fetch('/.netlify/functions/eintragen', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ vorname: v, email: m, abo: true, webseite: $('webseite').value })
+    }).then(function(r){
+      return r.json().catch(function(){ return {}; }).then(function(d){ return { ok: r.ok, d: d }; });
+    }).then(function(x){
+      if (!x.ok) throw new Error((x.d && x.d.fehler) || TEXTE.fehler_senden);
+      zaehle('eingetragen');
+      window.location.href = 'danke.html';
+    }).catch(function(err){
+      knopf.disabled = false;
+      // Eigene Meldungen der Funktion sind ganze Saetze, Netzfehler nicht.
+      var text = err && err.message;
+      meldung.textContent = (text && / /.test(text) && /\.$/.test(text)) ? text : TEXTE.fehler_senden;
+    });
+  });
+})();
+</script>
+</body>
+</html>

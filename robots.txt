@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /.netlify/
+Disallow: /danke.html
+
+Sitemap: https://check.sicherauftreten.com/sitemap.xml

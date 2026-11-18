@@ -1,0 +1,63 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+# Werkstattdateien nicht ausliefern.
+[[redirects]]
+  from = "/LIESMICH.md"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/bauen.py"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/schriften-holen.py"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/vorlage.html"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/danke-vorlage.html"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/fragen.json"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/wix-test.mjs"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/package.json"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/package-lock.json"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/netlify/*"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/netlify.toml"
+  to = "/404"
+  status = 404
+  force = true
